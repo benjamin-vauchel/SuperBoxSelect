@@ -1,0 +1,26 @@
+@charset "utf-8";
+.x-superboxselect {position:relative; height: auto !important;width: auto !important; margin: 0px; overflow: hidden; padding:2px; display:block; outline: none !important;}
+.x-superboxselect input[disabled] {background-color: transparent;};
+.x-superboxselect ul { cursor: text; width:auto !important;}
+.x-superboxselect-display-btns {padding-right: 0px !important;}
+.x-superboxselect-btns {position: absolute; right: 1px; top: 0; overflow:hidden; padding:2px; float:right; margin-top:4px;}
+.x-superboxselect-btns div {float: left; width: 24px; height: 18px; margin-top: 0px;}
+.x-superboxselect-btn-clear {background: url(clear.png) no-repeat scroll left 0px;}
+.x-superboxselect-btn-expand {background: url(expand.png) no-repeat scroll left 0px;}
+/*.x-superboxselect-btn-over {background-position: left -16px}*/
+.x-superboxselect-btn-hide {display:none;}
+.x-superboxselect li {float: left; margin: 1px 1px 2px 1px; padding: 0;line-height: 18px;}
+.x-superboxselect-stacked li {float: none !important;}
+.x-superboxselect-input input { border: none; outline: none; margin-top: 4px; margin-bottom: 4px;}
+.x-superboxselect-input-field {background: url(combo-bck.png) repeat-x 0 4px;}
+body.ext-ie .x-superboxselect-input input {background: none; border: none; margin-top: 3px;}
+.x-superboxselect-item {position: relative; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; o-border-radius: 3px; khtml-border-radius: 3px; border: none; background-color: #5E5E5E; padding: 1px 18px 1px 5px !important; color: #EEEEEE; text-shadow: none; font-size:12px;}
+body.ext-ie7 .x-superboxselect-item {margin: 2px 1px 2px 1px; line-height: 1.2em; padding: 2px 17px 4px 5px !important;}
+body.ext-ie6 .x-superboxselect-item {margin: 2px 1px 2px 1px; line-height: 1.2em; padding: 2px 19px 4px 5px !important;}
+/*.x-superboxselect-item-hover {background: #5E5E5E; border: 1px solid #5E5E5E; text-shadow: 0 -1px 1px #1F1F1F;}
+.x-superboxselect-item-focus {border-color: #5E5E5E; background: #5E5E5E; color: #fff; text-shadow: 0 -1px 1px #1F1F1F;}*/
+.x-superboxselect-item-close {background: url(close.png) no-repeat scroll left -12px; border: none; cursor: default; font-size: 1px; height: 16px;padding:0; position: absolute; right: 0px; top: 2px; width: 13px;display:block;cursor:pointer;}
+
+.x-superboxselect-item-close:hover, .x-superboxselect-item-close:active  { background-position: left -24px;}
+.x-superboxselect-item-focus .x-superboxselect-item-close{ background-position: left -24px}
+.x-item-disabled .x-superboxselect-item-close{ background-position: left -36px}
