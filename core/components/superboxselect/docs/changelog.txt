@@ -1,0 +1,10 @@
+Changelog for SuperBoxSelect
+
+SuperBoxSelect 1.0.0-rc1 (November 13, 2011)
+======================================
+Packaged for Revo
+Use ExtJS superboxselect type included in MODx Revolution
+
+SuperBoxSelect 1.0.0-beta1 (May 12, 2011)
+======================================
+Initial Version

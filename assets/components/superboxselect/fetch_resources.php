@@ -19,21 +19,28 @@ $queryValuesDelimiter = "|";
 // Select resources
 $parents = !empty($_REQUEST['parents']) ? explode(',',$_REQUEST['parents']) : array(0);
 $depth = 10;
-$children = array();
-foreach ($parents as $parent) {
-    $pchildren = $modx->getChildIds($parent, $depth);
-    if (!empty($pchildren)) $children = array_merge($children, $pchildren);
-}
-if (!empty($children)) $parents = array_merge($parents, $children);
 
 $c = $modx->newQuery('modResource');
   
 $c->where(array(
-	'parent:IN' => $parents,
 	'deleted' => false,
 	'published' => true,
 	'isfolder' => 0,
 ));
+
+if(!empty($_REQUEST['parents']))
+{
+	$children = array();
+	foreach ($parents as $parent) {
+	    $pchildren = $modx->getChildIds($parent, $depth);
+	    if (!empty($pchildren)) $children = array_merge($children, $pchildren);
+	}
+	if (!empty($children)) $parents = array_merge($parents, $children);
+	
+	$c->andCondition(array(
+	    'parent:IN' => $parents,
+	));
+}
   
  
 if(!empty($_REQUEST['query']))
@@ -78,4 +85,3 @@ $output = $modx->toJSON($results);;
 header("Content-type: text/html; charset=UTF-8");
 header("Content-Size: " . strlen($outputd));
 echo $output;
-  
