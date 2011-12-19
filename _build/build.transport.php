@@ -57,6 +57,7 @@ $sources= array (
     'data' => $root . '_build/data/',
     'docs' => $root . 'core/components/superboxselect/docs/',
     'tv_php'=> $root . 'core/model/modx/processors/element/tv/renders/mgr/input/superboxselect.php',
+    'tv_class_php'=> $root . 'core/model/modx/processors/element/tv/renders/mgr/input/superboxselect.class.php',
     'tv_tpl'=> $root . 'manager/templates/default/element/tv/renders/input/superboxselect.tpl',
 );
 unset($root);
@@ -117,6 +118,10 @@ $vehicle = $builder->createVehicle($category,$attr);
 /* Add TV sources */
 $vehicle->resolve('file',array(
     'source' => $sources['tv_php'],
+    'target' => "return MODX_CORE_PATH . 'model/modx/processors/element/tv/renders/mgr/input/';",
+));
+$vehicle->resolve('file',array(
+    'source' => $sources['tv_class_php'],
     'target' => "return MODX_CORE_PATH . 'model/modx/processors/element/tv/renders/mgr/input/';",
 ));
 $vehicle->resolve('file',array(
