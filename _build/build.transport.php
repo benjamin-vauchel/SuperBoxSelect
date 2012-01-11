@@ -31,7 +31,7 @@
 /* Set package info be sure to set all of these */
 define('PKG_NAME','SuperBoxSelect');
 define('PKG_NAME_LOWER','superboxselect');
-define('PKG_VERSION','1.0.0');
+define('PKG_VERSION','1.0.1');
 define('PKG_RELEASE','rc1');
 define('PKG_CATEGORY','SuperBoxSelect');
 
@@ -56,8 +56,7 @@ $sources= array (
     'source_assets' => $root.'assets/components/'.PKG_NAME_LOWER,
     'data' => $root . '_build/data/',
     'docs' => $root . 'core/components/superboxselect/docs/',
-    'tv_php'=> $root . 'core/model/modx/processors/element/tv/renders/mgr/input/superboxselect.php',
-    'tv_class_php'=> $root . 'core/model/modx/processors/element/tv/renders/mgr/input/superboxselect.class.php',
+    'tv_php'=> $root . 'core/model/modx/processors/element/tv/renders/mgr/input/superboxselect.class.php',
     'tv_tpl'=> $root . 'manager/templates/default/element/tv/renders/input/superboxselect.tpl',
 );
 unset($root);
@@ -118,10 +117,6 @@ $vehicle = $builder->createVehicle($category,$attr);
 /* Add TV sources */
 $vehicle->resolve('file',array(
     'source' => $sources['tv_php'],
-    'target' => "return MODX_CORE_PATH . 'model/modx/processors/element/tv/renders/mgr/input/';",
-));
-$vehicle->resolve('file',array(
-    'source' => $sources['tv_class_php'],
     'target' => "return MODX_CORE_PATH . 'model/modx/processors/element/tv/renders/mgr/input/';",
 ));
 $vehicle->resolve('file',array(

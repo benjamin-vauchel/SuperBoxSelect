@@ -1,12 +1,12 @@
 --------------------
-Snippets: SuperBoxSelect
+SuperBoxSelect
 --------------------
-Version: 1.0.0-rc1
-Released: November 13, 2011
+Version: 1.0.1-rc1
+Released: Januray 11, 2012
 Since: May 12, 2011
 Author: Benjamin Vauchel <contact@omycode.fr>
 
-SuperBoxSelect is a TV for MODx Revolution 2.1.x inspired by SuperBoxSelect ExtJS Plugin (http://www.technomedia.co.uk/SuperBoxSelect/examplesRemote.html).
+SuperBoxSelect is a TV for MODx Revolution 2.2 inspired by SuperBoxSelect ExtJS Plugin (http://www.technomedia.co.uk/SuperBoxSelect/examplesRemote.html).
 
 This TV displays selected resources as labelled boxes within the form field. As seen on facebook, hotmail and other sites, it combines both auto-complete and multi-selection capabilities.
 
