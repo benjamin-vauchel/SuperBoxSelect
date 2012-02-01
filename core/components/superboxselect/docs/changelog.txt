@@ -1,5 +1,9 @@
 Changelog for SuperBoxSelect
 
+SuperBoxSelect 1.0.1-rc2 (February 1, 2012)
+======================================
+Fix installation when manager directory name was changed
+
 SuperBoxSelect 1.0.1-rc1 (January 11, 2012)
 ======================================
 Refactor for MODx Revo 2.2

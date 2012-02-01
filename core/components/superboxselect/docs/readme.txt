@@ -1,8 +1,8 @@
 --------------------
 SuperBoxSelect
 --------------------
-Version: 1.0.1-rc1
-Released: Januray 11, 2012
+Version: 1.0.1-rc2
+Released: February 1, 2012
 Since: May 12, 2011
 Author: Benjamin Vauchel <contact@omycode.fr>
 
