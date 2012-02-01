@@ -121,7 +121,7 @@ $vehicle->resolve('file',array(
 ));
 $vehicle->resolve('file',array(
     'source' => $sources['tv_tpl'],
-    'target' => "return MODX_BASE_PATH . 'manager/templates/default/element/tv/renders/input/';",
+    'target' => "return MODX_MANAGER_PATH . 'templates/default/element/tv/renders/input/';",
 ));
 
 /* This section transfers every file in the local 
