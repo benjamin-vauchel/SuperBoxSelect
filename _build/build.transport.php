@@ -32,7 +32,7 @@
 define('PKG_NAME','SuperBoxSelect');
 define('PKG_NAME_LOWER','superboxselect');
 define('PKG_VERSION','1.0.1');
-define('PKG_RELEASE','rc2');
+define('PKG_RELEASE','pl1');
 define('PKG_CATEGORY','SuperBoxSelect');
 
 /******************************************

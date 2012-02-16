@@ -1,5 +1,9 @@
 Changelog for SuperBoxSelect
 
+SuperBoxSelect 1.0.1-pl1 (February 16, 2012)
+======================================
+Fix height component to display properly multiple rows
+
 SuperBoxSelect 1.0.1-rc2 (February 1, 2012)
 ======================================
 Fix installation when manager directory name was changed
