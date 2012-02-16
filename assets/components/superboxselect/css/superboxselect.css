@@ -24,3 +24,4 @@ body.ext-ie6 .x-superboxselect-item {margin: 2px 1px 2px 1px; line-height: 1.2em
 .x-superboxselect-item-close:hover, .x-superboxselect-item-close:active  { background-position: left -24px;}
 .x-superboxselect-item-focus .x-superboxselect-item-close{ background-position: left -24px}
 .x-item-disabled .x-superboxselect-item-close{ background-position: left -36px}
+.x-tab, .x-tab-item, .x-form-element, .x-form-field-wrap, .x-superboxselect, .ext-strict .x-form-field-trigger-wrap .x-form-text, .ext-strict .x-small-editor .x-form-field-trigger-wrap .x-form-text{height: auto !important;}
