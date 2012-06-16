@@ -83,5 +83,5 @@ $output = $modx->toJSON($results);;
 
 // Send results
 header("Content-type: text/html; charset=UTF-8");
-header("Content-Size: " . strlen($outputd));
+header("Content-Size: " . strlen($output));
 echo $output;
