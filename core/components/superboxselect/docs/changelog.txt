@@ -1,5 +1,9 @@
 Changelog for SuperBoxSelect
 
+SuperBoxSelect 1.0.1-pl2 (June 16, 2012)
+======================================
+Fix fetch resource bug
+
 SuperBoxSelect 1.0.1-pl1 (February 16, 2012)
 ======================================
 Fix height component to display properly multiple rows
