@@ -17,8 +17,16 @@ $queryValuesIndicator = 'valuesqry';
 $queryValuesDelimiter = "|";
     
 // Select resources
-$parents = !empty($_REQUEST['parents']) ? explode(',',$_REQUEST['parents']) : array(0);
+$parents = explode(',', $modx->getOption('parents', $_REQUEST, '0'));
+$resource_id = explode(',', $modx->getOption('resource_id', $_REQUEST, '0'));
+$context_key = explode(',', $modx->getOption('context_key', $_REQUEST, FALSE));
 $depth = 10;
+
+// Get the context of the current edited resource
+if (!$context_key) {
+	$resource = $modx->getObject('modResource', $resource_id);
+	$context_key = $resource->get('context_key');
+}
 
 $c = $modx->newQuery('modResource');
   
@@ -31,8 +39,21 @@ $c->where(array(
 if(!empty($_REQUEST['parents']))
 {
 	$children = array();
-	foreach ($parents as $parent) {
-	    $pchildren = $modx->getChildIds($parent, $depth);
+	foreach ($parents as &$parent) {
+	    // if $parent is not numeric, assume it is set by a context/system setting
+		if (!is_numeric($parent)) {
+			// get the key of this context that is referenced by
+			$object = $modx->getObject('modContextSetting', array('context_key' => $context_key, 'key' => $parent));
+			if ($object) {
+				// if the context and the context key are valid get the context setting
+				$parent = $object->get('value');
+				$parent = ($parent) ? intval($parent) : 0;
+			} else {
+			    // else get the system setting
+			    $parent = intval($modx->getOption($parent, NULL, 0));
+			}
+		}
+	    $pchildren = $modx->getChildIds($parent, $depth, array('context' => $context_key));
 	    if (!empty($pchildren)) $children = array_merge($children, $pchildren);
 	}
 	if (!empty($children)) $parents = array_merge($parents, $children);
@@ -83,5 +104,5 @@ $output = $modx->toJSON($results);;
 
 // Send results
 header("Content-type: text/html; charset=UTF-8");
-header("Content-Size: " . strlen($outputd));
+header("Content-Size: " . strlen($output));
 echo $output;

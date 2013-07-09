@@ -19,6 +19,7 @@ Ext.onReady(function() {
 		baseParams:{
 		    {/literal}
 		    parents: '{$parents}',
+		    resource_id: '{$resource_id}',
 			{literal}
 		}
 	});

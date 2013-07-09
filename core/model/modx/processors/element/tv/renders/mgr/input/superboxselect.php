@@ -23,4 +23,6 @@ $this->xpdo->smarty->assign('assets_url',$modx->getOption('assets_url',null,'/as
 $this->xpdo->smarty->assign('parents',$parents);
 $this->xpdo->smarty->assign('values',$values);
 $this->xpdo->smarty->assign('remote_url',$remote_url);
+$this->xpdo->smarty->assign('resource_id', $this->modx->getOption('id', $_REQUEST, 0));
+
 return $this->xpdo->smarty->fetch('element/tv/renders/input/superboxselect.tpl');
